@@ -20,6 +20,7 @@
     <p>JavaScript can show hidden HTML elements.</p>
     <p id="demo2" style="display:none">Hello JavaScript!</p>
     <button type="button" onclick="document.getElementById('demo2').style.display='block'">Click Me!</button>
+	<p id="number"></p>
     <script>
         function change(){
             document.getElementById('myImage').src='pic_bulbon.gif';
@@ -30,7 +31,8 @@
                 console.log('Inside function');
                 return "function";
             }
-
+	var x=0.2+0.1;
+	document.getElementById("number").innerHTML=x;
 
     </script>
 </body>
