@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #error{
+                color:red
+            }
+        </style>
+    </head>
+<body>
+<form name="myForm" action="" method="" onsubmit="">
+Name: <input type="text" name="fname" onchange="validateForm()">
+<input type="submit" value="Submit">
+<p id="error"></p>
+</form>
+
+<script>
+    function validateForm() {
+        var x = document.forms["myForm"]["fname"].value;
+        if (x == "") {
+            document.getElementById("error").innerHTML='Error! Name must not be empty!!';
+            return false;
+        }
+        else{
+            document.getElementById("error").innerHTML='';
+            return true;            
+        }
+    }
+</script>
+</body>
+</html>
